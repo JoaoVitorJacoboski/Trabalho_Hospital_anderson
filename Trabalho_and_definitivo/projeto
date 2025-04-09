@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8c7b4d16-fcf3-4e02-98c3-fda121aff5ff" activeEnvironment="Default" name="projeto" resourceRoot="" soapui-version="5.8.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2812b353-5980-443d-b9e7-e9d7d904c938" wsaVersion="NONE" name="MedicoWSImpServiceSoapBinding" type="wsdl" bindingName="{http://hospital/}MedicoWSImpServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp?wsdl"><con:part><con:url>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="MedicoWSImpService" targetNamespace="http://hospital/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://hospital/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://interfaces.hospital/">
+  <wsdl:import location="http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp?wsdl=MedicoWS.wsdl" namespace="http://interfaces.hospital/"></wsdl:import>
+  <wsdl:binding name="MedicoWSImpServiceSoapBinding" type="ns1:MedicoWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="inserir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="inserir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="inserirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="BusinessException">
+        <soap:fault name="BusinessException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SQLException">
+        <soap:fault name="SQLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NamingException">
+        <soap:fault name="NamingException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="desligar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="desligar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="desligarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SQLException">
+        <soap:fault name="SQLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NamingException">
+        <soap:fault name="NamingException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="atualizar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="atualizar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="atualizarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="BusinessException">
+        <soap:fault name="BusinessException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SQLException">
+        <soap:fault name="SQLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NamingException">
+        <soap:fault name="NamingException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mostrar_Lista">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mostrar_Lista">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mostrar_ListaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SQLException">
+        <soap:fault name="SQLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NamingException">
+        <soap:fault name="NamingException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MedicoWSImpService">
+    <wsdl:port binding="tns:MedicoWSImpServiceSoapBinding" name="MedicoWSImpPort">
+      <soap:address location="http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp?wsdl=MedicoWS.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="MedicoWS" targetNamespace="http://interfaces.hospital/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://interfaces.hospital/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://interfaces.hospital/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://interfaces.hospital/">
+      <xs:element name="atualizar" type="tns:atualizar"/>
+      <xs:element name="atualizarResponse" type="tns:atualizarResponse"/>
+      <xs:element name="desligar" type="tns:desligar"/>
+      <xs:element name="desligarResponse" type="tns:desligarResponse"/>
+      <xs:element name="inserir" type="tns:inserir"/>
+      <xs:element name="inserirResponse" type="tns:inserirResponse"/>
+      <xs:element name="mostrar_Lista" type="tns:mostrar_Lista"/>
+      <xs:element name="mostrar_ListaResponse" type="tns:mostrar_ListaResponse"/>
+      <xs:complexType name="inserir">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:medicoRequestDTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="medicoRequestDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bairro" type="xs:string"/>
+          <xs:element minOccurs="0" name="complemento" type="xs:string"/>
+          <xs:element minOccurs="0" name="crm" type="xs:int"/>
+          <xs:element minOccurs="0" name="email" type="xs:string"/>
+          <xs:element minOccurs="0" name="especialidade" type="xs:string"/>
+          <xs:element minOccurs="0" name="logradouro" type="xs:string"/>
+          <xs:element minOccurs="0" name="nome" type="xs:string"/>
+          <xs:element minOccurs="0" name="numero" type="xs:int"/>
+          <xs:element minOccurs="0" name="telefone" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inserirResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:medico"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="medico">
+        <xs:sequence>
+          <xs:element name="ativo" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="bairro" type="xs:string"/>
+          <xs:element minOccurs="0" name="complemento" type="xs:string"/>
+          <xs:element minOccurs="0" name="crm" type="xs:int"/>
+          <xs:element minOccurs="0" name="email" type="xs:string"/>
+          <xs:element minOccurs="0" name="especialidade" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="logradouro" type="xs:string"/>
+          <xs:element minOccurs="0" name="nome" type="xs:string"/>
+          <xs:element minOccurs="0" name="numero" type="xs:int"/>
+          <xs:element minOccurs="0" name="telefone" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="desligar">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="desligarResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="atualizar">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:medico"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="atualizarResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="mostrar_Lista">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="mostrar_ListaResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:medico"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="NamingException" type="tns:NamingException"/>
+      <xs:complexType name="NamingException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="resolvedObj" type="xs:anyType"/>
+          <xs:element minOccurs="0" name="explanation" type="xs:string"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="BusinessException" type="tns:BusinessException"/>
+      <xs:complexType name="BusinessException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SQLException" type="tns:SQLException"/>
+      <xs:complexType name="SQLException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="sQLState" type="xs:string"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="inserir">
+    <wsdl:part element="ns1:inserir" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BusinessException">
+    <wsdl:part element="ns1:BusinessException" name="BusinessException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desligar">
+    <wsdl:part element="ns1:desligar" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SQLException">
+    <wsdl:part element="ns1:SQLException" name="SQLException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="atualizar">
+    <wsdl:part element="ns1:atualizar" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="atualizarResponse">
+    <wsdl:part element="ns1:atualizarResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mostrar_Lista">
+    <wsdl:part element="ns1:mostrar_Lista" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mostrar_ListaResponse">
+    <wsdl:part element="ns1:mostrar_ListaResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desligarResponse">
+    <wsdl:part element="ns1:desligarResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inserirResponse">
+    <wsdl:part element="ns1:inserirResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NamingException">
+    <wsdl:part element="ns1:NamingException" name="NamingException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MedicoWS">
+    <wsdl:operation name="inserir">
+      <wsdl:input message="ns1:inserir" name="inserir"></wsdl:input>
+      <wsdl:output message="ns1:inserirResponse" name="inserirResponse"></wsdl:output>
+      <wsdl:fault message="ns1:BusinessException" name="BusinessException"></wsdl:fault>
+      <wsdl:fault message="ns1:SQLException" name="SQLException"></wsdl:fault>
+      <wsdl:fault message="ns1:NamingException" name="NamingException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="desligar">
+      <wsdl:input message="ns1:desligar" name="desligar"></wsdl:input>
+      <wsdl:output message="ns1:desligarResponse" name="desligarResponse"></wsdl:output>
+      <wsdl:fault message="ns1:SQLException" name="SQLException"></wsdl:fault>
+      <wsdl:fault message="ns1:NamingException" name="NamingException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="atualizar">
+      <wsdl:input message="ns1:atualizar" name="atualizar"></wsdl:input>
+      <wsdl:output message="ns1:atualizarResponse" name="atualizarResponse"></wsdl:output>
+      <wsdl:fault message="ns1:BusinessException" name="BusinessException"></wsdl:fault>
+      <wsdl:fault message="ns1:SQLException" name="SQLException"></wsdl:fault>
+      <wsdl:fault message="ns1:NamingException" name="NamingException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mostrar_Lista">
+      <wsdl:input message="ns1:mostrar_Lista" name="mostrar_Lista"></wsdl:input>
+      <wsdl:output message="ns1:mostrar_ListaResponse" name="mostrar_ListaResponse"></wsdl:output>
+      <wsdl:fault message="ns1:SQLException" name="SQLException"></wsdl:fault>
+      <wsdl:fault message="ns1:NamingException" name="NamingException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp</con:endpoint></con:endpoints><con:operation id="d686569b-5952-4465-9169-9e0918a986e5" isOneWay="false" action="" name="atualizar" bindingOperationName="atualizar" type="Request-Response" outputName="atualizarResponse" inputName="atualizar" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aa14b717-1f4d-4239-b690-da3fe2d7c0d6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.hospital/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:atualizar>\r
+         <!--Optional:-->\r
+         <arg0>\r
+            <ativo>?</ativo>\r
+            <!--Optional:-->\r
+            <bairro>?</bairro>\r
+            <!--Optional:-->\r
+            <complemento>?</complemento>\r
+            <!--Optional:-->\r
+            <crm>?</crm>\r
+            <!--Optional:-->\r
+            <email>?</email>\r
+            <!--Optional:-->\r
+            <especialidade>?</especialidade>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <logradouro>?</logradouro>\r
+            <!--Optional:-->\r
+            <nome>?</nome>\r
+            <!--Optional:-->\r
+            <numero>?</numero>\r
+            <!--Optional:-->\r
+            <telefone>?</telefone>\r
+         </arg0>\r
+      </int:atualizar>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hospital/MedicoWS/atualizar"/></con:call></con:operation><con:operation id="982db9f3-e7f8-47d7-a195-fd3e3b807c3e" isOneWay="false" action="" name="desligar" bindingOperationName="desligar" type="Request-Response" outputName="desligarResponse" inputName="desligar" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99133709-64e3-4068-87d3-a22eed7c17ad" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.hospital/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:desligar>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </int:desligar>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hospital/MedicoWS/desligar"/></con:call></con:operation><con:operation id="6320da27-0247-4697-a0f9-d89018c972cd" isOneWay="false" action="" name="inserir" bindingOperationName="inserir" type="Request-Response" outputName="inserirResponse" inputName="inserir" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c556e80a-4ad4-480b-96dd-1dd5d546e623" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.hospital/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:inserir>\r
+         <!--Optional:-->\r
+         <arg0>\r
+            <!--Optional:-->\r
+            <bairro>?</bairro>\r
+            <!--Optional:-->\r
+            <complemento>?</complemento>\r
+            <!--Optional:-->\r
+            <crm>?</crm>\r
+            <!--Optional:-->\r
+            <email>?</email>\r
+            <!--Optional:-->\r
+            <especialidade>?</especialidade>\r
+            <!--Optional:-->\r
+            <logradouro>?</logradouro>\r
+            <!--Optional:-->\r
+            <nome>?</nome>\r
+            <!--Optional:-->\r
+            <numero>?</numero>\r
+            <!--Optional:-->\r
+            <telefone>?</telefone>\r
+         </arg0>\r
+      </int:inserir>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hospital/MedicoWS/inserir"/></con:call></con:operation><con:operation id="d2950ac1-30f7-4177-82db-d671353aa90b" isOneWay="false" action="" name="mostrar_Lista" bindingOperationName="mostrar_Lista" type="Request-Response" outputName="mostrar_ListaResponse" inputName="mostrar_Lista" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e8f123f9-b6c7-4bbc-a274-4216f7b20b3a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Hospital-1.0-SNAPSHOT/MedicoWSImp</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.hospital/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:mostrar_Lista/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hospital/MedicoWS/mostrar_Lista"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
