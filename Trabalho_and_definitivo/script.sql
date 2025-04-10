@@ -14,7 +14,7 @@ CREATE TABLE paciente (
     ativo BOOLEAN DEFAULT TRUE
 );
 
--- Tabela Medico
+
 CREATE TABLE medico (
     id SERIAL PRIMARY KEY,
     crm INTEGER UNIQUE NOT NULL,
@@ -29,7 +29,6 @@ CREATE TABLE medico (
     ativo BOOLEAN DEFAULT TRUE
 );
 
--- Tabela Consulta
 CREATE TABLE consulta (
     id SERIAL PRIMARY KEY,
     id_paciente INTEGER NOT NULL REFERENCES paciente(id),
@@ -39,6 +38,6 @@ CREATE TABLE consulta (
     motivo_cancelamento VARCHAR(255)
 );
 
--- Índices para otimização
+
 CREATE INDEX idx_consulta_medico_dt_hora ON consulta(id_medico, dt_hora);
 CREATE INDEX idx_consulta_paciente_dt_hora ON consulta(id_paciente, dt_hora);
